@@ -1,0 +1,25 @@
+.sidenav{
+    background: rgb(149,159, 161, 0.4);
+
+}
+.nav-scrolled{
+    background: rgb(149,159, 161, 0.7) !important;
+    transition: all 0.4s ease-in-out;
+    color: white;
+}
+.user-view{
+    height: 40%;
+}
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+}
+#dropdownNavbar{
+    color: black !important;
+}
+a{
+    color: black;
+}
+.form-content{
+    margin-top: 10vh;
+}
