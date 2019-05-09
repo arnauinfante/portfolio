@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('auth.home');
+        $data['proyectos'] = 3;
+        $data['lenguajes'] = 20;
+        $data['idiomas'] = 4;
+        $data['lenguaje'] = 'php';
+
+        return view('auth.home', $data);
     }
 }

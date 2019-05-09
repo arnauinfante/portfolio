@@ -1,7 +1,9 @@
 
   $(document).ready(function(){
 
-    $('.sidenav').sidenav();
+    $('.sidenav').sidenav({
+        draggable: true
+    });
     $('.parallax').parallax();
 
     $('.modal').modal();
