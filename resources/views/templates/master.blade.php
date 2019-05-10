@@ -46,22 +46,26 @@
                     </div>
                 </div>
             </li>
-            <li><a href="sass.html">Inicio</a></li>
-            <li><a href="badges.html">Proyectos</a></li>
-            <li><a href="collapsible.html">Curriculum</a></li>
+            <li><a class="white-text" href="sass.html">Inicio</a></li>
+            <li><a class="white-text" href="badges.html">Proyectos</a></li>
+            <li><a class="white-text" href="collapsible.html">Curriculum</a></li>
             @if(Auth::check())
-                <li><a href="{{ route('home') }}">Dashboard</a></li>
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">{{ Auth::user()->name }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="white-text" href="{{ route('home') }}">Dashboard</a></li>
+                <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown1">{{ Auth::user()->name }}<i class="material-icons white-text right">arrow_drop_down</i></a></li>
                 <ul id='dropdown1' class='dropdown-content'>
                     <li><a href="{{ route('logout') }}">Logout</a></li>
             </ul>
             @else
-                <li><a class="modal-trigger" href="#modal1">Login</a></li>
+                <li><a class="modal-trigger white-text" href="#modal1">Login</a></li>
             @endif
         </ul>
+            <div class="parallax-container">
+                <div id="particles-JS" class="parallax"><img src="{{ url('img/parallax.jpg') }}"></div>
+            </div>
           @yield('content')
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="{{ asset('libs/materialize/js/materialize.min.js') }}"></script>
       <script type="text/javascript" src="{{ asset('js/events.js') }}"></script>
+      @yield('js')
     </body>
   </html>

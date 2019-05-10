@@ -4,8 +4,8 @@
     $('.sidenav').sidenav({
         draggable: true
     });
-    $('.parallax').parallax();
 
+    $('.parallax').parallax();
     $('.modal').modal();
 
     $('.dropdown-trigger').dropdown({
@@ -16,7 +16,6 @@
         aligment: 'left',
         stopPropagation: false
     });
-
   });
   $(window).scroll(function(){
 

@@ -5,8 +5,10 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="parallax-container">
-                <div class="parallax"><img src="{{ url('img/parallax.jpg') }}"></div>
+            <div  class="parallax-container">
+                <div id="particles-JS" class="parallax">
+                    <canvas class="particles-js-canvas-el" width="1583" height="497" style="width: 100%; height: 100%;"></canvas>
+                </div>
             </div>
             <div class="section grey lighten-3">
                 <div class="row container">
@@ -56,4 +58,9 @@
             </div>
         </div>
     </div>
+
+@endsection
+@section('js')
+    <script type="text/javascript" src="{{ asset('libs/particles_js/particles.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
 @endsection
