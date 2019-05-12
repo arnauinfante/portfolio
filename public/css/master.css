@@ -95,7 +95,17 @@ a{
    .caption{
        justify-content: center;
        align-items: center;
+
    }
+   .caption h4{
+    animation: slidein 7s;
+   }
+   @keyframes slidein {
+    0% { margin-top:-800px; }
+    20% { margin-top:-800px; }
+    35% { margin-top:0px; }
+    100% { margin-top:0px; }
+}
 
 @media (max-width: 768px)
 {
