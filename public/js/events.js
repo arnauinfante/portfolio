@@ -6,6 +6,7 @@
     });
 
     $('.parallax').parallax();
+    $('.parallax').hide();
     $('.modal').modal();
 
     $('.dropdown-trigger').dropdown({
@@ -20,7 +21,7 @@
   $(window).scroll(function(){
 
     var scroll = $(window).scrollTop();
-    if( scroll > $('.parallax-container').height() - 24){
+    if( scroll > $('#particles-js').height()){
         $("nav").addClass('nav-scrolled');
         $("nav").removeClass('z-depth-0');
         $("#dropdownNavbar").addClass('nav-scrolled');

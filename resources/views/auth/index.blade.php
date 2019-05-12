@@ -6,8 +6,10 @@
     <div class="container-fluid">
         <div class="row">
             <div  class="parallax-container">
-                <div id="particles-JS" class="parallax">
-                    <canvas class="particles-js-canvas-el" width="1583" height="497" style="width: 100%; height: 100%;"></canvas>
+                <div class="parallax">
+                </div>
+                <div class="" id="particles-js">
+
                 </div>
             </div>
             <div class="section grey lighten-3">
@@ -61,6 +63,6 @@
 
 @endsection
 @section('js')
-    <script type="text/javascript" src="{{ asset('libs/particles_js/particles.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('libs/particles_js/particles.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
 @endsection

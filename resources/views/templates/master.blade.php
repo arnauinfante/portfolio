@@ -19,7 +19,8 @@
         <div class="navbar-fixed">
             <nav class="white-text transparent z-depth-0">
                 <div class="nav-wrapper">
-                    <a href="{{ url('/') }}" class="brand-logo" style="padding: 0px 10px;">Logo</a>
+                    <div class="container">
+                    {{-- <a href="{{ url('/') }}" class="brand-logo" style="padding: 0px 10px;">Logo</a> --}}
                     <a href="#" class="sidenav-trigger" data-target="#mobile-nav">
                         <i class="material-icons">menu</i>
                     </a>
@@ -37,6 +38,7 @@
                             <li><a class="modal-trigger" href="#modal1">Login</a></li>
                         @endif
                     </ul>
+                </div>
                 </div>
             </nav>
         </div>
