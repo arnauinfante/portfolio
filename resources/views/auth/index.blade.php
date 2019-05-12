@@ -8,8 +8,8 @@
             <div id="particles-js">
                 <div class="row">
                     <div class="offset-1  caption">
-                        <h1 class="grey-text text-lighten-3">Arnau Infante</h1>
-                        <h4 class="grey-text text-lighten-3">Full stack web developer</h4>
+                        <h1 class="grey-text text-lighten-3">ARNAU INFANTE</h1>
+                        <h4 class="grey-text text-lighten-3">Full stack developer</h4>
                     </div>
                 </div>
             </div>

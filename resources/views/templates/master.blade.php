@@ -4,7 +4,9 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="{{ asset('libs/materialize/css/materialize.min.css') }}"  media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="{{ asset('css/master.css') }}"  media="screen,projection"/>
+
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
