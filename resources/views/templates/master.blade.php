@@ -48,22 +48,19 @@
                     </div>
                 </div>
             </li>
-            <li><a class="white-text" href="sass.html">Inicio</a></li>
-            <li><a class="white-text" href="badges.html">Proyectos</a></li>
-            <li><a class="white-text" href="collapsible.html">Curriculum</a></li>
+            <li><a class="grey-text text-lighten-3" href="{{ url('/') }}">Inicio</a></li>
+            <li><a class="grey-text text-lighten-3" href="#Proyectos">Proyectos</a></li>
+            <li><a class="grey-text text-lighten-3" href="#Curriculum">Curriculum</a></li>
             @if(Auth::check())
-                <li><a class="white-text" href="{{ route('home') }}">Dashboard</a></li>
-                <li><a class="dropdown-trigger white-text" href="#!" data-target="dropdown1">{{ Auth::user()->name }}<i class="material-icons white-text right">arrow_drop_down</i></a></li>
+                <li><a class="grey-text text-lighten-3" href="{{ route('home') }}">Dashboard</a></li>
+                <li><a class="dropdown-trigger grey-text text-lighten-3" href="#!" data-target="dropdown1">{{ Auth::user()->name }}<i class="material-icons grey-text text-lighten-3 right">arrow_drop_down</i></a></li>
                 <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="{{ route('logout') }}">Logout</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{{ route('logout') }}">Logout</a></li>
             </ul>
             @else
                 <li><a class="modal-trigger white-text" href="#modal1">Login</a></li>
             @endif
         </ul>
-            <div class="parallax-container">
-                <div id="particles-JS" class="parallax"><img src="{{ url('img/parallax.jpg') }}"></div>
-            </div>
           @yield('content')
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="{{ asset('libs/materialize/js/materialize.min.js') }}"></script>

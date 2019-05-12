@@ -5,8 +5,6 @@
         draggable: true
     });
 
-    $('.parallax').parallax();
-    $('.parallax').hide();
     $('.modal').modal();
 
     $('.dropdown-trigger').dropdown({

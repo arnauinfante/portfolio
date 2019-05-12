@@ -1,7 +1,12 @@
-.sidenav{
-    background: rgb(149,159, 161, 0.4);
+body{
+    background: rgb(122,14,21);
+}
+.sidenav, .dropdown-content{
+    /* background: rgb(149,159, 161, 0.4); */
+    background: rgb(122,14,21,0.3);
     color: white;
 }
+
 .nav-scrolled{
     background: rgb(149,159, 161, 0.7) !important;
     transition: all 0.4s ease-in-out;
@@ -27,12 +32,11 @@ a{
 .form-content{
     margin-top: 10vh;
 }
-.parallax-container{
-    background-color: #b61924;
-    height: auto !important;
+.card {
+    opacity: 0.7;
 }
 #particles-js canvas {
-    display: block !important;
+
     -webkit-transform: scale(1) !important;
     -ms-transform: scale(1) !important;
     transform: scale(1) !important;
@@ -41,38 +45,34 @@ a{
     transition: opacity .8s ease, transform 1.4s ease !important;
 }
 
+
 #particles-js {
     width: 100% !important;
-    height: 100% !important;
+    height: 100vh !important;
     margin: 0 auto;
+    background-color: #7a0e15;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+.particles-js-canvas-el{
+    position: absolute;
 }
 
-.parallax{
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    z-index: -9000 !important;
-}
 
 @media (max-width: 768px)
 {
+    .caption{
+        margin-left: 15px;
+    }
     #particles-js {
-        width: 100% !important;
-        height: 100% !important;
+        width: auto !important;
+        height: 100vh !important;
         margin: 0 auto;
     }
-    .parallax-container{
-        background-color: #b61924;
-        height: 100% !important;
-    }
-    .parallax{
-        width: 100% !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        z-index: -9000 !important;
-    }
+
     #particles-js canvas {
-        display: block !important;
         -webkit-transform: scale(1) !important;
         -ms-transform: scale(1) !important;
         transform: scale(1) !important;
