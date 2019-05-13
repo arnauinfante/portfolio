@@ -30,13 +30,27 @@ a:hover{
     }
 
 }
+table{
+    margin-top: 5vh;
+}
+
 @media (max-width: 768px)
 {
     .page-announce-text {
         font-size: 36px;
     }
 }
+@media (min-width: 768px)
+{
+    .td-edit{
+        width: 3vw;
+    }
+}
 
+h1,h2,h3,h4{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+}
 h1 {
     font-size: 4.2rem;
     line-height: 110%;
@@ -53,9 +67,10 @@ div.page-announce {
 h1.page-announce-text {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
-    font-size: 56px;
     color: #fff;
     line-height: 0.5em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
 }
 
 @media (max-width: 768px)

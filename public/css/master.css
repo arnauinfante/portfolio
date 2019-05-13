@@ -106,6 +106,17 @@ a{
     20% { margin-top:-800px; }
     35% { margin-top:0px; }
     100% { margin-top:0px; }
+    }
+
+.login{
+    margin: 3%;
+}
+.modal-close{
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 @media (max-width: 768px)

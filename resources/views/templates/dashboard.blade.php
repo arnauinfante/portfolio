@@ -4,6 +4,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="{{ asset('libs/materialize/css/materialize.min.css') }}"  media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="{{ asset('css/dashboard.css') }}"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
@@ -36,7 +37,7 @@
                                     <li><a href="">Proyectos</a></li>
                                     <li><a href="">Curriculum</a></li>
                                     <li><a href="">Lenguajes</a></li>
-                                    <li><a href="">Idiomas</a></li>
+                                    <li><a href="{{ url('/idiomas') }}">Idiomas</a></li>
                                 </ul>
 
                     </div>

@@ -27,9 +27,9 @@
                         <i class="material-icons">menu</i>
                     </a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{{ url('/') }}">Inicio</a></li>
-                        <li><a href="#Proyectos">Proyectos</a></li>
-                        <li><a href="#Curriculum">Curriculum</a></li>
+                        <li><a class="indice" href="{{ url('/') }}">Inicio</a></li>
+                        <li><a class="indice" href="#Proyectos">Proyectos</a></li>
+                        <li><a class="indice" href="#Curriculum">Curriculum</a></li>
                         @if(Auth::check() )
                             <li><a href="{{ route('home') }}">Dashboard</a></li>
                             <li><a class="dropdown-trigger" href="#!" data-target="dropdownNavbar">{{ Auth::user()->name }}<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -37,7 +37,7 @@
                                 <li><a class="white-text" href="{{ route('logout') }}">Logout</a></li>
                             </ul>
                         @else
-                            <li><a class="modal-trigger" href="#modal1">Login</a></li>
+                            <li><a class="modal-trigger" href="#modal1"><i class="material-icons left">person</i>Login</a></li>
                         @endif
                     </ul>
                 </div>
@@ -50,9 +50,9 @@
                     </div>
                 </div>
             </li>
-            <li><a class="grey-text text-lighten-3" href="{{ url('/') }}">Inicio</a></li>
-            <li><a class="grey-text text-lighten-3" href="#Proyectos">Proyectos</a></li>
-            <li><a class="grey-text text-lighten-3" href="#Curriculum">Curriculum</a></li>
+            <li><a class="indice grey-text text-lighten-3" href="{{ url('/') }}">Inicio</a></li>
+            <li><a class="indice grey-text text-lighten-3" href="#Proyectos">Proyectos</a></li>
+            <li><a class="indice grey-text text-lighten-3" href="#Curriculum">Curriculum</a></li>
             @if(Auth::check())
                 <li><a class="grey-text text-lighten-3" href="{{ route('home') }}">Dashboard</a></li>
                 <li><a class="dropdown-trigger grey-text text-lighten-3" href="#!" data-target="dropdown1">{{ Auth::user()->name }}<i class="material-icons grey-text text-lighten-3 right">arrow_drop_down</i></a></li>
@@ -60,7 +60,7 @@
                     <li><a class="grey-text text-lighten-3" href="{{ route('logout') }}">Logout</a></li>
             </ul>
             @else
-                <li><a class="modal-trigger white-text" href="#modal1">Login</a></li>
+                <li><a class="modal-trigger white-text" href="#modal1"><i class="material-icons prefix grey-text text-lighten-3">person</i>Login</a></li>
             @endif
         </ul>
           @yield('content')
