@@ -6,6 +6,8 @@ use App\Models\Idioma;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+ use App\Http\Resources\IdiomaResource;
+
 class IdiomaController extends Controller
 {
     /**
@@ -17,7 +19,7 @@ class IdiomaController extends Controller
     {
         $idiomas = Idioma::all();
 
-        return new IdiomaResource($idiomnas);
+        return IdiomaResource::collection($idiomas);
     }
 
     /**

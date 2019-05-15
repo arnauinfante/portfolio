@@ -34,10 +34,6 @@ a{
 .form-content{
     margin-top: 10vh;
 }
-.card {
-    opacity: 0.7;
-
-}
 #particles-js canvas {
 
     -webkit-transform: scale(1) !important;
@@ -48,6 +44,13 @@ a{
     transition: opacity .8s ease, transform 1.4s ease !important;
 }
 
+.tabs{
+    width: 100% !important;
+    height: 100vh !important;
+    margin: 0 auto;
+    background-color: rgb(122,14,21);
+    display: flex;
+}
 
 #particles-js {
     width: 100% !important;

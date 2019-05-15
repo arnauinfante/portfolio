@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\QueryException;
 use App\Models\Idioma;
 use Illuminate\Http\Request;
+use App\Clases\Utilitat;
 
 class IdiomaController extends Controller
 {
@@ -27,7 +29,7 @@ class IdiomaController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.admin.idiomas.create');
     }
 
     /**
@@ -38,7 +40,21 @@ class IdiomaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $idioma = new Idioma();
+        $idioma->nom = $request->input('nombre');
+        $idioma->nivell = $request->input('nivel');
+
+        try{
+            $idioma->save();
+
+            return redirect('/idiomas')->withInput();
+        }catch(QueryException $e)
+        {
+            $error= Utilitat::errorMessage($e);
+            $request->session()->flash('error', $error);
+
+            return redirect('/idiomas/create')->withInput();
+        }
     }
 
     /**
@@ -60,7 +76,8 @@ class IdiomaController extends Controller
      */
     public function edit(Idioma $idioma)
     {
-        //
+        $data['idioma'] = $idioma;
+        return view('auth.admin.idiomas.edit', $data);
     }
 
     /**
@@ -72,7 +89,19 @@ class IdiomaController extends Controller
      */
     public function update(Request $request, Idioma $idioma)
     {
-        //
+        $idioma->nom = $request->input('nombre');
+        $idioma->nivell = $request->input('nivel');
+
+        try{
+
+            $idioma->save();
+
+        }catch(QueryException $ex)
+        {
+            $error = Utilitat::errorMessage($ex);
+            $request->session()->flash('error', $error);
+        }
+        return redirect('/idiomas')->withInput();
     }
 
     /**
@@ -83,6 +112,14 @@ class IdiomaController extends Controller
      */
     public function destroy(Idioma $idioma)
     {
-        //
+        try{
+            $idioma->delete();
+
+        }catch(QueryException $ex)
+        {
+            $error = Utilitat::errorMessage($ex);
+            $request->session()->flash('error', $error);
+        }
+        return redirect('/idiomas')->withInput();
     }
 }

@@ -3,34 +3,44 @@
 @section('title','Index')
 
 @section('content')
-    <div class="container-fluid">
+    <div id="particles-js">
         <div class="row">
-            <div id="particles-js">
-                <div class="row">
-                    <div class="offset-1  caption">
-                        <h1 class="grey-text text-lighten-3">ARNAU INFANTE</h1>
-                        <h4 class="grey-text text-lighten-3">Full stack developer</h4>
-                    </div>
-                </div>
+            <div class="offset-1  caption">
+                <h1 class="grey-text text-lighten-3">ARNAU INFANTE</h1>
+                <h4 class="grey-text text-lighten-3">Full stack developer</h4>
             </div>
-                <div class="row">
-                    <div id='Incio' class="card large grey lighten-4">
-                        <div class="card-content">
-                               <h4>Sobre mi</h4>
-                        </div>
-                    </div>
-                    <div id='Proyectos' class="card large grey lighten-4">
-                        <div class="card-content">
-                                <h4>Proyectos</h4>
-                        </div>
-                    </div>
-                    <div id="Curriculum" class="card large grey lighten-4">
-                        <div class="card-content">
-                                <h4>Curriculum</h4>
-                        </div>
-                    </div>
-                </div>
         </div>
+    </div>
+    <div id="Curriculum" class="tabs grey-text text-lighten-3">
+        <div class="container">
+            <h4>Sobre mi</h4>
+            <h5>Idiomas</h5>
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Idioma</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody class="idiomas">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id='Proyectos' class="tabs grey-text text-lighten-3">
+            <div class="container">
+                    <h4>Proyectos</h4>
+
+            </div>
+    </div>
+    <div id="Contacto" class="tabs grey-text text-lighten-3">
+            <div class="container">
+                    <h4>Contacto</h4>
+                    <form action="" method="POST">
+
+                    </form>
+            </div>
     </div>
     <div id="modal1" class="modal">
         <div class="container">

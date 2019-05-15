@@ -28,7 +28,6 @@
                             <td class="center td-edit">
                                 <form action="{{ action('IdiomaController@edit', [$idioma->id]) }}" method="GET">
                                     <button class="btn-floating yellow darken-3" type="submit" name="action"><i class="material-icons right">edit</i></button>
-                                    {{-- <button class="btn waves-effect waves-light btn-small yellow darken-3" type="submit" name="action"><i class="material-icons right">edit</i>EDITAR </button> --}}
                                 </form>
                             </td>
                             <td>
@@ -36,7 +35,6 @@
                                     @method('delete')
                                     @csrf
                                     <button class="btn-floating red darken-3" type="submit"><i class="material-icons right">delete</i></button>
-                                    {{-- <button class="btn waves-effect waves-light btn-small red darken-3" type="submit"><i class="material-icons right">remove_circle</i>BORRAR</button> --}}
                                 </form>
                             </td>
                         </tr>
