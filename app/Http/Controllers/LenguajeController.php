@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Lenguaje;
 use Illuminate\Http\Request;
+use App\Clases\Utilitat;
+use Illuminate\Database\QueryException;
 
 class LenguajeController extends Controller
 {
@@ -27,7 +29,7 @@ class LenguajeController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.admin.lenguajes.create');
     }
 
     /**
@@ -38,7 +40,19 @@ class LenguajeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $lenguaje = new Lenguaje();
+        $lenguaje->nom = $request->input('nombre');
+        $lenguaje->anys = $request->input('años');
+
+        try{
+            $lenguaje->save();
+        }catch(QueryException $e){
+
+            $error = Utilitat::errorMessage($e);
+            $request->session()->flash('error', $error);
+            return redirect()->action('LenguajeController@create')->withInput();
+        }
+        return  redirect()->action('LenguajeController@index')->withInput();
     }
 
     /**
@@ -60,7 +74,8 @@ class LenguajeController extends Controller
      */
     public function edit(Lenguaje $lenguaje)
     {
-        //
+        $data['lenguaje']= $lenguaje;
+        return view('auth.admin.lenguajes.edit', $data);
     }
 
     /**
@@ -72,7 +87,20 @@ class LenguajeController extends Controller
      */
     public function update(Request $request, Lenguaje $lenguaje)
     {
-        //
+        $lenguaje->nom = $request->input('nombre');
+        $lenguaje->anys = $request->input('años');
+
+        try{
+            $lenguaje->save();
+
+        }catch(QueryException $e){
+
+            $error = Utilitat::errorMessage($e);
+            $request->session()->flash('error', $error);
+            return redirect()->action('LenguajeController@edit')->withInput();
+        }
+        return  redirect()->action('LenguajeController@index')->withInput();
+
     }
 
     /**
@@ -83,6 +111,14 @@ class LenguajeController extends Controller
      */
     public function destroy(Lenguaje $lenguaje)
     {
-        //
+        try{
+            $lenguaje->delete();
+
+        }catch(QueryException $ex)
+        {
+            $error = Utilitat::errorMessage($ex);
+            $request->session()->flash('error', $error);
+        }
+        return redirect('/lenguajes')->withInput();
     }
 }

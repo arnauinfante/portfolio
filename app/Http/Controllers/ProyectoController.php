@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Proyecto;
 use App\Models\Lenguaje;
 use Illuminate\Http\Request;
+use App\Clases\Utilitat;
+use Illuminate\Database\QueryException;
 
 class ProyectoController extends Controller
 {
