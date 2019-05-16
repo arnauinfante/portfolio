@@ -6,6 +6,9 @@
     $('.sidenav').sidenav({
         draggable: true
     });
+    $(document).ready(function(){
+        $('select').formSelect();
+      });
 
     $('.dropdown-trigger').dropdown({
         inDuration: 300,

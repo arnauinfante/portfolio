@@ -360,6 +360,7 @@ class ComposerStaticInitee6ee57dbcc9345760a163d097e329bc
     );
 
     public static $classMap = array (
+        'App\\Clases\\Utilitat' => __DIR__ . '/../..' . '/app/Clases/Utilitat.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -369,6 +370,8 @@ class ComposerStaticInitee6ee57dbcc9345760a163d097e329bc
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\IdiomaController' => __DIR__ . '/../..' . '/app/Http/Controllers/IdiomaController.php',
+        'App\\Http\\Controllers\\api\\IdiomaController' => __DIR__ . '/../..' . '/app/Http/Controllers/api/IdiomaController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -377,6 +380,8 @@ class ComposerStaticInitee6ee57dbcc9345760a163d097e329bc
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Resources\\IdiomaResource' => __DIR__ . '/../..' . '/app/Http/Resources/IdiomaResource.php',
+        'App\\ModelsProyecto' => __DIR__ . '/../..' . '/app/ModelsProyecto.php',
         'App\\Models\\Idioma' => __DIR__ . '/../..' . '/app/Models/Idioma.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

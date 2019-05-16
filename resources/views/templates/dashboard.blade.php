@@ -34,9 +34,9 @@
                             <li><a href="{{ url('/') }}"><i class="material-icons">home</i>Inicio</a></li>
                             <li><a class="dropdown-trigger" href="#!" data-target="dropdownNavbar"><i class="material-icons">grid_on</i>Tablas<i class="material-icons right">arrow_drop_down</i></a></li>
                                 <ul id='dropdownNavbar' class='dropdown-content transparent z-depth-0'>
-                                    <li><a href="">Proyectos</a></li>
+                                    <li><a href="{{ url('/proyectos') }}">Proyectos</a></li>
                                     <li><a href="">Curriculum</a></li>
-                                    <li><a href="">Lenguajes</a></li>
+                                    <li><a href="{{ url('/lenguajes') }}">Lenguajes</a></li>
                                     <li><a href="{{ url('/idiomas') }}">Idiomas</a></li>
                                 </ul>
 
