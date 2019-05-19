@@ -14,24 +14,31 @@
     <div id="Curriculum" class="tabs grey-text text-lighten-3">
         <div class="container">
             <h4>Sobre mi</h4>
-            <h5>Idiomas</h5>
-            <table class="responsive-table">
-                <thead>
-                    <tr>
-                        <th>Idioma</th>
-                        <th>Nivel</th>
-                    </tr>
-                </thead>
-                <tbody class="idiomas">
 
-                </tbody>
-            </table>
+            <div class="row">
+                <div class="col m6">
+                    <img src="{{ asset('img/logo_web.png') }}" alt="">
+                </div>
+            </div>
+            <h5>Idiomas</h5>
+            <div class="row">
+                <div class="col m6">
+                    <table class="responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Idioma</th>
+                                <th>Nivel</th>
+                            </tr>
+                        </thead>
+                        <tbody class="idiomas"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
     <div id='Proyectos' class="tabs grey-text text-lighten-3">
             <div class="container">
                     <h4>Proyectos</h4>
-
             </div>
     </div>
     <div id="Contacto" class="tabs grey-text text-lighten-3">
