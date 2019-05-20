@@ -57,16 +57,18 @@ a{
 }
 .tabs{
     width: 100% !important;
-    height: auto !important;
     margin: 0 auto;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 .tabs .tab a:focus, .tabs .tab a:focus.active {
     background-color: transparent;
     outline: none;
 }
 .sobre-mi{
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+}
+#tab-estudios, #tab-idiomas, #tab-lenguajes, #tab-framework{
+    height: 100% !important;
 }
 #particles-js {
     width: 100% !important;

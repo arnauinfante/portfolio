@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('idioma','api\IdiomaController');
+Route::apiResource('lenguaje', 'api\LenguajeController');
+Route::apiResource('proyecto','api\ProyectoController');

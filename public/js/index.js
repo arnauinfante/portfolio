@@ -2,12 +2,13 @@ $(document).ready(function(){
 
     particlesJS.load('particles-js','libs/particles_js/particles_conf.json');
     getIdiomas();
+    getLenguajes();
 });
 
 function getIdiomas(){
 
 
-    datos = {
+   var datos = {
         type: "get",
         url: "./api/idioma",
         dataType: 'json',
@@ -24,6 +25,27 @@ function getIdiomas(){
             console.log('error');
         }
     };
+    ajax(datos);
+}
+function getLenguajes(){
+
+    var datos = {
+        type: "get",
+        url: "./api/lenguaje",
+        dataType: 'json',
+        async: true,
+        success: function(json){
+            lenguajes = JSON.stringify(json);
+            lenguajesOBJ = $.parseJSON(lenguajes);
+            console.log(lenguajes);
+            lenguajesOBJ['data'].forEach(function(lenguaje, index){
+                $('.lenguajes').append('<tr id=' + lenguaje.id + '><td>' + lenguaje.nom + '</td><td>' + lenguaje.anys + '</td></tr>')
+            });
+        },
+        error: function(){
+            console.log('error');
+        }
+    }
     ajax(datos);
 }
 function ajax(datos){
