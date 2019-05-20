@@ -17,7 +17,7 @@ class LenguajeController extends Controller
      */
     public function index()
     {
-        $lenguajes = Lenguaje::all()->paginate(5);
+        $lenguajes = Lenguaje::all();
 
         return LenguajeResource::collection($lenguajes);
     }
