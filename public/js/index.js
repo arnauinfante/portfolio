@@ -6,7 +6,8 @@ $(document).ready(function(){
 
 function getIdiomas(){
 
-    $.ajax({
+
+    datos = {
         type: "get",
         url: "./api/idioma",
         dataType: 'json',
@@ -22,6 +23,10 @@ function getIdiomas(){
         error: function(){
             console.log('error');
         }
-    });
+    };
+    ajax(datos);
+}
+function ajax(datos){
+    $.ajax(datos);
 }
 

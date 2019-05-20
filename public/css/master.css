@@ -48,14 +48,26 @@ a{
     margin-top: 10vh;
     text-align: center;
 }
-.tabs{
+.pages{
     width: 100% !important;
-    height: 100vh !important;
+    height: auto !important;
     margin: 0 auto;
     background-color: rgb(122,14,21);
     display: flex;
 }
-
+.tabs{
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: transparent;
+    outline: none;
+}
+.sobre-mi{
+    margin-top: 10vh;
+}
 #particles-js {
     width: 100% !important;
     height: 100vh !important;

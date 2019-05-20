@@ -6,6 +6,11 @@
     $('.sidenav').sidenav({
         draggable: true
     });
+    $('.tabs').tabs({
+        swipeable: true,
+
+    });
+
     $(document).ready(function(){
         $('select').formSelect();
       });

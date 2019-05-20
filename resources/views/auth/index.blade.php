@@ -11,37 +11,50 @@
             </div>
         </div>
     </div>
-    <div id="Curriculum" class="tabs grey-text text-lighten-3">
+    <div id='Proyectos' class="pages grey-text text-lighten-3">
         <div class="container">
+                <h4>Proyectos</h4>
+        </div>
+    </div>
+    <div id="Curriculum" class="pages grey-text text-lighten-3">
+        <div class="container">
+            <div class="row">
             <h4>Sobre mi</h4>
-
-            <div class="row">
-                <div class="col m6">
-                    <img src="{{ asset('img/logo_web.png') }}" alt="">
+                <div class="col s12">
+                  <ul class="tabs tabs-transparent">
+                    <li class="tab col s3"><a href="#test1">Estudios</a></li>
+                    <li class="tab col s3"><a class="active" href="#test2">Idiomas</a></li>
+                    <li class="tab col s3"><a href="#test3">Lenguajes</a></li>
+                    <li class="tab col s3"><a href="#test4">Frameworks</a></li>
+                  </ul>
                 </div>
-            </div>
-            <h5>Idiomas</h5>
-            <div class="row">
-                <div class="col m6">
-                    <table class="responsive-table">
-                        <thead>
-                            <tr>
-                                <th>Idioma</th>
-                                <th>Nivel</th>
-                            </tr>
-                        </thead>
-                        <tbody class="idiomas"></tbody>
-                    </table>
+                <div id="test1" class="col s12">
+                    <div class="col s12 m6">
+                        <img class="responsive-img" src="{{ asset('img/logo_web.png') }}" alt="">
+                    </div>
                 </div>
+                <div id="test2" class="col s12">
+                    <div class="row">
+                        <div class="col s12">
+                            <table class="responsive-table sobre-mi">
+                                <thead>
+                                    <tr>
+                                        <th>Idioma</th>
+                                        <th>Nivel</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="idiomas"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="test3" class="col s12">Test 3</div>
+                <div id="test4" class="col s12">Test 4</div>
+              </div>
             </div>
         </div>
     </div>
-    <div id='Proyectos' class="tabs grey-text text-lighten-3">
-            <div class="container">
-                    <h4>Proyectos</h4>
-            </div>
-    </div>
-    <div id="Contacto" class="tabs grey-text text-lighten-3">
+    <div id="Contacto" class="pages grey-text text-lighten-3">
             <div class="container">
                     <h4>Contacto</h4>
                     <form action="" method="POST">
@@ -78,6 +91,6 @@
 
 @endsection
 @section('js')
-    <script type="text/javascript" src="{{ asset('libs/particles_js/particles.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('libs/particles_js/particles.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
 @endsection

@@ -28,8 +28,8 @@
                     </a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a class="indice" href="{{ url('/') }}">Inicio</a></li>
+                        <li><a class="indice" href="#Proyectos">Portfolio</a></li>
                         <li><a class="indice" href="#Curriculum">Sobre mi</a></li>
-                        <li><a class="indice" href="#Proyectos">Proyectos</a></li>
                         <li><a class="indice" href="#Contacto">Contacto</a></li>
                         @if(Auth::check() )
                             <li><a href="{{ route('home') }}">Dashboard</a></li>
@@ -52,8 +52,9 @@
                 </div>
             </li>
             <li><a class="indice grey-text text-lighten-3" href="{{ url('/') }}">Inicio</a></li>
+            <li><a class="indice grey-text text-lighten-3" href="#Proyectos">Portfolio</a></li>
             <li><a class="indice grey-text text-lighten-3" href="#Curriculum">Sobre mi</a></li>
-            <li><a class="indice grey-text text-lighten-3" href="#Proyectos">Proyectos</a></li>
+            <li><a class="indice grey-text text-lighten-3" href="#Contacto">Contacto</a></li>
             @if(Auth::check())
                 <li><a class="grey-text text-lighten-3" href="{{ route('home') }}">Dashboard</a></li>
                 <li><a class="dropdown-trigger grey-text text-lighten-3" href="#!" data-target="dropdown1">{{ Auth::user()->name }}<i class="material-icons grey-text text-lighten-3 right">arrow_drop_down</i></a></li>
