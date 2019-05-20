@@ -50,10 +50,13 @@ a{
 }
 .pages{
     width: 100% !important;
-    height: auto !important;
+    height: 100vh !important;
     margin: 0 auto;
     background-color: rgb(122,14,21);
     display: flex;
+}
+.proyectos .card-image{
+    background-color: rgb(122,14,21);
 }
 .tabs{
     width: 100% !important;
@@ -64,8 +67,8 @@ a{
     background-color: transparent;
     outline: none;
 }
-.sobre-mi{
-    /* margin-top: 10vh; */
+.idiomas{
+    margin-top: 10vh;
 }
 #tab-estudios, #tab-idiomas, #tab-lenguajes, #tab-framework{
     height: 100% !important;

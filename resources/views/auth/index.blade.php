@@ -14,6 +14,9 @@
     <div id='Proyectos' class="pages grey-text text-lighten-3">
         <div class="container">
                 <h4>Proyectos</h4>
+                    <div class="row proyectos">
+
+                    </div>
         </div>
     </div>
     <div id="Curriculum" class="pages grey-text text-lighten-3">
@@ -34,8 +37,9 @@
                     </div>
                 </div>
                 <div id="tab-idiomas" class="col s12">
-                    <div class="row">
-                        <div class="col s12">
+                    <div class="row idiomas center-block">
+
+                        {{-- <div class="col s12">
                             <table class="responsive-table sobre-mi">
                                 <thead>
                                     <tr>
@@ -45,7 +49,7 @@
                                 </thead>
                                 <tbody class="idiomas"></tbody>
                             </table>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div id="tab-lenguajes" class="col s12">

@@ -3,6 +3,7 @@ $(document).ready(function(){
     particlesJS.load('particles-js','libs/particles_js/particles_conf.json');
     getIdiomas();
     getLenguajes();
+    getProyectos();
 });
 
 function getIdiomas(){
@@ -18,7 +19,8 @@ function getIdiomas(){
             idiomasOBJ = $.parseJSON(idiomas);
             console.log(idiomas);
             idiomasOBJ['data'].forEach(function(idioma, index){
-                $('.idiomas').append('<tr id=' + idioma.id + '><td>' + idioma.nom + '</td><td>' + idioma.nivell + '</td></tr>')
+                $('.idiomas').append('<div class="col s12 m4"><div class="card grey card-circle lighten-3 black-text"><div class="card-content"><span class="card-title center-align">'+ idioma.nom +'</span> <p class="center-align">'+ idioma.nivell +'</p></div></div></div>')
+                // $('.idiomas').append('<tr id=' + idioma.id + '><td>' + idioma.nom + '</td><td>' + idioma.nivell + '</td></tr>')
             });
         },
         error: function(){
@@ -40,6 +42,31 @@ function getLenguajes(){
             console.log(lenguajes);
             lenguajesOBJ['data'].forEach(function(lenguaje, index){
                 $('.lenguajes').append('<tr id=' + lenguaje.id + '><td>' + lenguaje.nom + '</td><td>' + lenguaje.anys + '</td></tr>')
+            });
+        },
+        error: function(){
+            console.log('error');
+        }
+    }
+    ajax(datos);
+}
+function getProyectos(){
+
+    var datos = {
+        type: "get",
+        url: "./api/proyecto",
+        dataType: 'json',
+        async: true,
+        success: function(json){
+            proyectos = JSON.stringify(json);
+            proyectosOBJ = $.parseJSON(proyectos);
+            console.log(proyectos);
+            proyectosOBJ['data'].forEach(function(proyecto, index){
+                $('.proyectos').append('<div class="col s12 m6"><div class="card"><div class="card-image waves-effect waves-block waves-light">'+
+                '<img class="activator" src="img/logo_web.png"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4">' + proyecto.nom +
+                '<i class="material-icons right">more_vert</i></span><p><a href="'+ proyecto.url +'">Visitar</a></p></div><div class="card-reveal">' +
+                '<span class="card-title grey-text text-darken-4">Descripció<i class="material-icons right">close</i></span>' +
+                '<p>'+ proyecto.descripcio + '</p></div></div></div>')
             });
         },
         error: function(){
