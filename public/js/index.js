@@ -4,6 +4,7 @@ $(document).ready(function(){
     getIdiomas();
     getLenguajes();
     getProyectos();
+    getEstudios();
 });
 
 function getIdiomas(){
@@ -17,7 +18,6 @@ function getIdiomas(){
         success: function(json){
             idiomas = JSON.stringify(json);
             idiomasOBJ = $.parseJSON(idiomas);
-            console.log(idiomas);
             idiomasOBJ['data'].forEach(function(idioma, index){
                 $('.idiomas').append('<div class="col s12 m4"><div class="card card-background white-text"><div class="card-content"><span class="card-title center-align">'+ idioma.nom +'</span> <p class="center-align">'+ idioma.nivell +'</p></div></div></div>')
                 // $('.idiomas').append('<tr id=' + idioma.id + '><td>' + idioma.nom + '</td><td>' + idioma.nivell + '</td></tr>')
@@ -39,7 +39,6 @@ function getLenguajes(){
         success: function(json){
             lenguajes = JSON.stringify(json);
             lenguajesOBJ = $.parseJSON(lenguajes);
-            console.log(lenguajes);
             lenguajesOBJ['data'].forEach(function(lenguaje, index){
                 $('.lenguajes').append('<tr id=' + lenguaje.id + '><td>' + lenguaje.nom + '</td><td>' + lenguaje.anys + '</td></tr>')
             });
@@ -60,7 +59,6 @@ function getProyectos(){
         success: function(json){
             proyectos = JSON.stringify(json);
             proyectosOBJ = $.parseJSON(proyectos);
-            console.log(proyectos);
             proyectosOBJ['data'].forEach(function(proyecto, index){
                 $('.proyectos').append('<div class="flexbox-slide">' +
                 '<img src="'+ proyecto.imatge +'" alt="Slide Image">' +
@@ -72,6 +70,30 @@ function getProyectos(){
         }
     }
     ajax(datos);
+}
+
+ function getEstudios(){
+
+    var datos = {
+        type: "get",
+        url: "./api/estudio",
+        dataType: 'json',
+        async: true,
+        success: function(json){
+            estudios = JSON.stringify(json);
+            estudiosOBJ = $.parseJSON(estudios);
+            estudiosOBJ['data'].forEach(function(estudio, index){
+                $('.estudios').append('<div class="col s12"><div class="card card-background white-text">' +
+                    '<div class="card-content"><span class="card-title">'+ estudio.nom +'</span><p>Curso '+ estudio.curs + '</p>' +
+                        '<p>'+ estudio.centre + '</p></div></div></div>')
+            });
+        },
+        error: function(){
+            console.log('error');
+        }
+    }
+    ajax(datos);
+
 }
 function ajax(datos){
     $.ajax(datos);

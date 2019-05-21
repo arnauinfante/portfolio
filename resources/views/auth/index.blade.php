@@ -38,11 +38,11 @@
                   <div class="col s12 m6">
                         <img class="responsive-img" src="{{ asset('img/logo_web.png') }}" alt="">
                     </div>
-                    <div class="col s12 m6">
-                            <div class="col s12">
+                    <div class="col s12 m6 estudios">
+                            {{-- <div class="col s12">
                                 <div class="card card-background white-text">
                                     <div class="card-content">
-                                        <span class="card-title center-align">
+                                        <span class="card-title">
                                             Desarrollo de aplicaciones web en ABP
                                         </span>
                                         <p>Curso 2018-2019</p>
@@ -71,7 +71,7 @@
                                         <p>INS Corbera de llobregat</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                     </div>
                 </div>
                 <div id="tab-idiomas" class="col s12 tabs-height">
