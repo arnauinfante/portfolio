@@ -19,7 +19,7 @@ function getIdiomas(){
             idiomasOBJ = $.parseJSON(idiomas);
             console.log(idiomas);
             idiomasOBJ['data'].forEach(function(idioma, index){
-                $('.idiomas').append('<div class="col s12 m4"><div class="card grey card-circle lighten-3 black-text"><div class="card-content"><span class="card-title center-align">'+ idioma.nom +'</span> <p class="center-align">'+ idioma.nivell +'</p></div></div></div>')
+                $('.idiomas').append('<div class="col s12 m4"><div class="card card-background white-text"><div class="card-content"><span class="card-title center-align">'+ idioma.nom +'</span> <p class="center-align">'+ idioma.nivell +'</p></div></div></div>')
                 // $('.idiomas').append('<tr id=' + idioma.id + '><td>' + idioma.nom + '</td><td>' + idioma.nivell + '</td></tr>')
             });
         },
@@ -62,11 +62,9 @@ function getProyectos(){
             proyectosOBJ = $.parseJSON(proyectos);
             console.log(proyectos);
             proyectosOBJ['data'].forEach(function(proyecto, index){
-                $('.proyectos').append('<div class="col s12 m6"><div class="card"><div class="card-image waves-effect waves-block waves-light">'+
-                '<img class="activator" src="img/logo_web.png"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4">' + proyecto.nom +
-                '<i class="material-icons right">more_vert</i></span><p><a href="'+ proyecto.url +'">Visitar</a></p></div><div class="card-reveal">' +
-                '<span class="card-title grey-text text-darken-4">Descripció<i class="material-icons right">close</i></span>' +
-                '<p>'+ proyecto.descripcio + '</p></div></div></div>')
+                $('.proyectos').append('<div class="flexbox-slide">' +
+                '<img src="'+ proyecto.imatge +'" alt="Slide Image">' +
+                '<div class="text-block"><h3>'+ proyecto.nom + '</h3><div class="text"><p>'+  proyecto.descripcio + '</p><a class="btn-floating red darken-3" role="button" href="'+ proyecto.url +'"><i class="material-icons center">link</i></a></div></div></div>')
             });
         },
         error: function(){

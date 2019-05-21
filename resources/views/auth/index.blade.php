@@ -14,9 +14,12 @@
     <div id='Proyectos' class="pages grey-text text-lighten-3">
         <div class="container">
                 <h4>Proyectos</h4>
-                    <div class="row proyectos">
+                <div class="slider-container z-depth-2">
+                    <div class="flexbox-slider flexbox-slider-2 proyectos">
 
                     </div>
+
+                </div>
         </div>
     </div>
     <div id="Curriculum" class="pages grey-text text-lighten-3">
@@ -31,12 +34,47 @@
                     <li class="tab col s3"><a href="#tab-frameworks">Frameworks</a></li>
                   </ul>
                 </div>
-                <div id="tab-estudios" class="col s12">
-                    <div class="col s12 m6">
+                <div id="tab-estudios" class="col s12 tabs-height">
+                  <div class="col s12 m6">
                         <img class="responsive-img" src="{{ asset('img/logo_web.png') }}" alt="">
                     </div>
+                    <div class="col s12 m6">
+                            <div class="col s12">
+                                <div class="card card-background white-text">
+                                    <div class="card-content">
+                                        <span class="card-title center-align">
+                                            Desarrollo de aplicaciones web en ABP
+                                        </span>
+                                        <p>Curso 2018-2019</p>
+                                        <p>Centre d'Estudis Politècnics</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="card card-background white-text">
+                                    <div class="card-content">
+                                        <span class="card-title center-align">
+                                            Desarrollo de aplicaciones multiplataforma
+                                        </span>
+                                        <p>Curso 2014-2017</p>
+                                        <p>Centre d'Estudis Politècnics</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="card card-background white-text">
+                                    <div class="card-content">
+                                        <span class="card-title center-align">
+                                           Bachillerato tecnológico
+                                        </span>
+                                        <p>Curso 2012-2014</p>
+                                        <p>INS Corbera de llobregat</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                 </div>
-                <div id="tab-idiomas" class="col s12">
+                <div id="tab-idiomas" class="col s12 tabs-height">
                     <div class="row idiomas center-block">
 
                         {{-- <div class="col s12">
@@ -52,10 +90,10 @@
                         </div> --}}
                     </div>
                 </div>
-                <div id="tab-lenguajes" class="col s12">
+                <div id="tab-lenguajes" class="col s12 tabs-height">
                     <div class="row">
                         <div class="col s12">
-                            <table class="responsive-table sobre-mi">
+                            <table class="responsive-table">
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -67,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="tab-frameworks" class="col s12"></div>
+                <div id="tab-frameworks" class="col s12 tabs-height"></div>
             </div>
         </div>
     </div>

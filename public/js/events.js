@@ -6,10 +6,8 @@
     $('.sidenav').sidenav({
         draggable: true
     });
-    $('.tabs').tabs({
-        swipeable: true,
+    $('.tabs').tabs();
 
-    });
 
     $(document).ready(function(){
         $('select').formSelect();
