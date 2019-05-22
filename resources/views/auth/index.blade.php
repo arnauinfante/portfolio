@@ -35,73 +35,20 @@
                   </ul>
                 </div>
                 <div id="tab-estudios" class="col s12 tabs-height">
-                  <div class="col s12 m6">
-                        <img class="responsive-img" src="{{ asset('img/logo_web.png') }}" alt="">
+                  <div id="logo-container" class="col s12 m6">
+                        <img id="logo" class="responsive-img" src="{{ asset('img/logo_web.png') }}" alt="">
                     </div>
                     <div class="col s12 m6 estudios">
-                            {{-- <div class="col s12">
-                                <div class="card card-background white-text">
-                                    <div class="card-content">
-                                        <span class="card-title">
-                                            Desarrollo de aplicaciones web en ABP
-                                        </span>
-                                        <p>Curso 2018-2019</p>
-                                        <p>Centre d'Estudis Politècnics</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12">
-                                <div class="card card-background white-text">
-                                    <div class="card-content">
-                                        <span class="card-title center-align">
-                                            Desarrollo de aplicaciones multiplataforma
-                                        </span>
-                                        <p>Curso 2014-2017</p>
-                                        <p>Centre d'Estudis Politècnics</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12">
-                                <div class="card card-background white-text">
-                                    <div class="card-content">
-                                        <span class="card-title center-align">
-                                           Bachillerato tecnológico
-                                        </span>
-                                        <p>Curso 2012-2014</p>
-                                        <p>INS Corbera de llobregat</p>
-                                    </div>
-                                </div>
-                            </div> --}}
                     </div>
                 </div>
                 <div id="tab-idiomas" class="col s12 tabs-height">
                     <div class="row idiomas center-block">
-
-                        {{-- <div class="col s12">
-                            <table class="responsive-table sobre-mi">
-                                <thead>
-                                    <tr>
-                                        <th>Idioma</th>
-                                        <th>Nivel</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="idiomas"></tbody>
-                            </table>
-                        </div> --}}
                     </div>
                 </div>
                 <div id="tab-lenguajes" class="col s12 tabs-height">
                     <div class="row">
                         <div class="col s12">
-                            <table class="responsive-table">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Años</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="lenguajes"></tbody>
-                            </table>
+                            <canvas id="myChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -146,6 +93,7 @@
 
 @endsection
 @section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script type="text/javascript" src="{{ asset('libs/particles_js/particles.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
 @endsection

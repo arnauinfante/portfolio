@@ -5,24 +5,7 @@ $(document).ready(function(){
     getLenguajes();
     getProyectos();
     getEstudios();
-    colorApi();
 });
-
-
-function colorApi(){
-    $.ajax({
-        url: 'http://www.thecolorapi.com/id?hex=00FFEE',
-        success: function(respuesta) {
-            // console.log(respuesta);
-            color = JSON.stringify(respuesta);
-            colorOBJ = $.parseJSON(color);
-            console.log(colorOBJ);
-        },
-        error: function() {
-            console.log("ERROR");
-        }
-    });
-  };
 
 function getIdiomas(){
 
@@ -56,12 +39,21 @@ function getLenguajes(){
         success: function(json){
             lenguajes = JSON.stringify(json);
             lenguajesOBJ = $.parseJSON(lenguajes);
+            console.log(lenguajesOBJ);
+            lenguajes_nombre = [];
+            lenguajes_años = [];
             lenguajesOBJ['data'].forEach(function(lenguaje, index){
-                $('.lenguajes').append('<tr id=' + lenguaje.id + '><td>' + lenguaje.nom + '</td><td>' + lenguaje.anys + '</td></tr>')
-            });
+                lenguajes_nombre.push(lenguaje.nom);
+                lenguajes_años.push(lenguaje.anys);
+            //  $('.lenguajes').append('<tr id=' + lenguaje.id + '><td>' + lenguaje.nom + '</td><td>' + lenguaje.anys + '</td></tr>')
+             });
+
         },
         error: function(){
             console.log('error');
+        },
+        complete: function(){
+            chartLenguajes();
         }
     }
     ajax(datos);
@@ -112,9 +104,85 @@ function getProyectos(){
     ajax(datos);
 
 }
+
+function chartLenguajes(){
+
+
+
+    // let myChart =  document.getElementById('myChart').getContext('2d');
+    // let lenguajesChart;
+
+    // lenguajesChart = new Chart(myChart,{
+    //     type : 'bar',
+    //     data: {
+    //         labels:lenguajes_nombre,
+    //         datsets: [{
+    //             label:'Años',
+    //             data: lenguajes_años,
+    //             backgroundColor: 'rgba(255,255,255,0.5)',
+    //             borderwidth:1,
+    //             hoverBorderWidth: 3,
+    //         }],
+    //     },
+    //     options:{},
+
+    // });
+
+    Chart.defaults.global.defaultFontColor = '#FFF';
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: lenguajes_nombre,
+        datasets: [{
+            label: 'Años',
+            data: lenguajes_años,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        resposive: true,
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true,
+
+                }
+            }]
+        }
+    }
+});
+}
 function ajax(datos){
     $.ajax(datos);
 }
+
 
 
 

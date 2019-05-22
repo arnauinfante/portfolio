@@ -50,13 +50,10 @@ a{
 }
 .pages{
     width: 100% !important;
-    height: auto !important;
+    min-height: 100vh !important;
     margin: 0 auto;
     background-color: rgb(122,14,21);
     display: flex;
-}
-#Proyectos{
-    height: 100vh !important;
 }
 .card-background{
     background-color: rgba(255, 255, 255, 0.1);
@@ -140,6 +137,26 @@ a{
     35% { margin-top:0px; }
     100% { margin-top:0px; }
     }
+    #logo-container{
+       margin-top: 5vh;
+    }
+    #logo{
+        vertical-align: center;
+        animation: fadein 4s;
+    }
+    @keyframes fadein {
+        0% { opacity: 0; }
+        10% { opacity: 0.1; }
+        20% { opacity: 0.2; }
+        30% { opacity: 0.3; }
+        40% { opacity: 0.4; }
+        50% { opacity: 0.5; }
+        60% { opacity: 0.6; }
+        70% { opacity: 0.7; }
+        80% { opacity: 0.8; }
+        90% { opacity: 0.9; }
+        100% { opacity: 1; }
+        }
 
 .login{
     margin: 3%;
@@ -151,7 +168,11 @@ a{
     margin: 0 !important;
     padding: 0 !important;
 }
-
+@media (min-width: 992px){
+    #logo{
+        margin-left: 20%;
+    }
+}
 @media (max-width: 768px)
 {
     .caption{
@@ -184,7 +205,7 @@ a{
 /* Image accordion style*/
 
 .slider-container {
-    margin-bottom: 60px;
+    vertical-align: center;
   }
   .slider-container h2 {
     text-align: center;
