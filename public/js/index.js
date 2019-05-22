@@ -5,6 +5,8 @@ $(document).ready(function(){
     getLenguajes();
     getProyectos();
     getEstudios();
+
+    $()
 });
 
 function getIdiomas(){
