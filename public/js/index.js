@@ -5,7 +5,24 @@ $(document).ready(function(){
     getLenguajes();
     getProyectos();
     getEstudios();
+    colorApi();
 });
+
+
+function colorApi(){
+    $.ajax({
+        url: 'http://www.thecolorapi.com/id?hex=00FFEE',
+        success: function(respuesta) {
+            // console.log(respuesta);
+            color = JSON.stringify(respuesta);
+            colorOBJ = $.parseJSON(color);
+            console.log(colorOBJ);
+        },
+        error: function() {
+            console.log("ERROR");
+        }
+    });
+  };
 
 function getIdiomas(){
 
@@ -98,4 +115,6 @@ function getProyectos(){
 function ajax(datos){
     $.ajax(datos);
 }
+
+
 
