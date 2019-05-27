@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Clases\Utilitat;
-use App\ContactUs;
+use App\Models\ContactUs;
 
 class HomeController extends Controller
 {

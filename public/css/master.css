@@ -142,7 +142,7 @@ a{
     }
     #logo{
         vertical-align: center;
-        animation: fadein 4s;
+        animation: fadein 1s;
     }
     @keyframes fadein {
         0% { opacity: 0; }

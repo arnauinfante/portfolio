@@ -21,6 +21,7 @@ Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
 Route::group(['middleware' =>['auth']],function(){
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::delete('/home/{contactus}','HomeController@destroy');
     Route::resource('/idiomas', 'IdiomaController');
     Route::resource('/proyectos','ProyectoController');
     Route::resource('/lenguajes','LenguajeController');
