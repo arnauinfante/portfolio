@@ -59,8 +59,31 @@
     <div id="Contacto" class="pages grey-text text-lighten-3">
             <div class="container">
                     <h4>Contacto</h4>
-                    <form action="" method="POST">
+                    @if (Session::has('success'))
+                        <div class="card-panel contact-feed green-text text-darken-4"> <h6 class="center">{{ Session::get('success') }}</h6></div>
+                    @elseif(Session::has('error'))
+                        <div class="card-panel contact-feed red-text text-darken-4"><h6 class="center">{{ Session::get('error') }}</h6></div>
+                    @endif
 
+                    <form action="{{ action('ContactUsController@store') }}" method="POST" class="contacto z-depth-1 card-background">
+                        @csrf
+                        <div class="row">
+                            <div class="input-field">
+                                <input id="name" name="name" type="text" class="validate">
+                                <label for="name">Nombre</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="email" name="email" type="text" class="validate">
+                                <label for="email">Correo</label>
+                            </div>
+                            <div class="input-field">
+                                <textarea name="message" id="message" type="text" class="materialize-textarea"></textarea>
+                                <label for="textarea">Mensaje</label>
+                            </div>
+                            <div class="input-field center">
+                                    <input type="submit" class="btn-large text-white" value="Contactar">
+                            </div>
+                        </div>
                     </form>
             </div>
     </div>

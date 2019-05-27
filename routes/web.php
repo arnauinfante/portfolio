@@ -26,8 +26,4 @@ Route::group(['middleware' =>['auth']],function(){
     Route::resource('/lenguajes','LenguajeController');
 });
 
-Route::get('contact-us', 'ContactUsController@contactUs');
-Route::post('contact-us',[
-'as'=>'contactus.store',
-'uses'=>'ContactUsController@contactUsPost'
-]);
+Route::post('contact-us','ContactUsController@store');

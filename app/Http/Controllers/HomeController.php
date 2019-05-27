@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Idioma;
 use Illuminate\Http\Request;
 use App\Clases\Utilitat;
+use App\ContactUs;
 
 class HomeController extends Controller
 {
@@ -25,11 +25,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data['proyectos'] = 3;
-        $data['lenguajes'] = 20;
-        $data['idiomas'] = 4;
-        $data['lenguaje'] = 'php';
+        $contactos = ContactUs::All();
+        $data['contactos'] = $contactos;
 
         return view('auth.home', $data);
+    }
+    public function destroy(ContactUs $contactus)
+    {
+        try{
+            $contactus->delete();
+
+        }catch(QueryException $ex)
+        {
+            $error = Utilitat::errorMessage($ex);
+            $request->session()->flash('error', $error);
+        }
+        return redirect('/home')->withInput();
+
     }
 }
