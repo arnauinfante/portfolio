@@ -65,7 +65,7 @@
                         <div class="card-panel contact-feed red-text text-darken-4"><h6 class="center">{{ Session::get('error') }}</h6></div>
                     @endif
 
-                    <form action="{{ action('ContactUsController@store') }}" method="POST" class="contacto z-depth-1 card-background">
+                    <form action="{{ action('ContactUsController@store') }}" method="POST" class="contacto z-depth-1">
                         @csrf
                         <div class="row">
                             <div class="input-field">
@@ -78,10 +78,10 @@
                             </div>
                             <div class="input-field">
                                 <textarea name="message" id="message" type="text" class="materialize-textarea"></textarea>
-                                <label for="textarea">Mensaje</label>
+                                <label for="message">Mensaje</label>
                             </div>
                             <div class="input-field center">
-                                    <input type="submit" class="btn-large text-white" value="Contactar">
+                                    <input type="submit" class="btn-large transparent text-white" value="Contactar">
                             </div>
                         </div>
                     </form>
