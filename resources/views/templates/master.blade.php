@@ -3,16 +3,16 @@
     <head>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="{{ asset('libs/materialize/css/materialize.min.css') }}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('libs/materialize/css/materialize.min.css') }}"  media="screen"/>
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="{{ asset('css/master.css') }}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('css/master.css') }}"  media="screen"/>
 
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <script type="text/javascript" src="{{ asset('libs/jQuery/jquery-3.3.1.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('libs/popper/popper.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
+      <script  src="{{ asset('libs/jQuery/jquery-3.3.1.min.js') }}"></script>
+      <script  src="{{ asset('libs/popper/popper.min.js') }}"></script>
+      <script  src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
       <title>@yield('title')</title>
 
     </head>
@@ -67,8 +67,8 @@
         </ul>
           @yield('content')
       <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="{{ asset('libs/materialize/js/materialize.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/events.js') }}"></script>
+      <script  src="{{ asset('libs/materialize/js/materialize.min.js') }}"></script>
+      <script src="{{ asset('js/events.js') }}"></script>
       @yield('js')
     </body>
   </html>

@@ -77,7 +77,7 @@
                                 <label for="email">Correo</label>
                             </div>
                             <div class="input-field">
-                                <textarea name="message" id="message" type="text" class="materialize-textarea"></textarea>
+                                <textarea name="message" id="message" class="materialize-textarea"></textarea>
                                 <label for="message">Mensaje</label>
                             </div>
                             <div class="input-field center">
@@ -117,6 +117,6 @@
 @endsection
 @section('js')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <script type="text/javascript" src="{{ asset('libs/particles_js/particles.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
+    <script  src="{{ asset('libs/particles_js/particles.js') }}"></script>
+    <script  src="{{ asset('js/index.js') }}"></script>
 @endsection
